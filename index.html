@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Users</title>
+    <script defer src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <header>
+          <img src="./assets/git-Logo.svg" alt="GitHub Logo" />
+          <h1>GitHub User Search</h1>
+        </header>
+        <main>
+          <div class="search-fahter">
+            <img class="search-logo" src="./assets/search.svg" alt="Search" />
+            <input
+              class="search-inp"
+              type="text"
+              id="search"
+              placeholder="Search for a user"
+            />
+            <button class="search-btn">Search</button>
+          </div>
+          <div class="user-list" id="userList"></div>
+          <div class="pagination" id="pagination">
+            <button class="prev" id="prev" disabled>Prev</button>
+            <span class="current-page" id="currentPage">1</span>
+            <button class="next" id="next">Next</button>
+          </div>
+        </main>
+        <aside class="user-details" id="userDetails"></aside>
+      </div>
+      <a href=""></a>
+    </section>
+  </body>
+</html>
