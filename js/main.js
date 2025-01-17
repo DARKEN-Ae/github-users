@@ -11,7 +11,7 @@ let currentPage = 1;
 let totalUsers = 0;
 
 async function fetchUsers(query, page = 1) {
-  let perPage = 10;
+  let perPage = 30;
   let url = `https://api.github.com/search/users?q=${query}&per_page=${perPage}&page=${page}`;
   let response = await fetch(url);
   let data = await response.json();
