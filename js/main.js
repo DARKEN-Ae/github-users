@@ -28,30 +28,14 @@ function renderUsers(users) {
         <div>
           <h2>${user.login}</h2>
           <p>ID: ${user.id}</p>
+          <a class = "view-profile" href = "${user.html_url}">View Profile</a>
         </div>
       </div>
     `
     )
     .join("");
 }
-
-async function showUserDetails(username) {
-  let url = `https://api.github.com/users/${username}`;
-  let response = await fetch(url);
-  let user = await response.json();
-  userDetails.innerHTML = `
-    <h2>${user.login}</h2>
-    <img src="${user.avatar_url}" alt="${user.login}" style="width: 100px; height: 100px; border-radius: 50%;" />
-    <ul>
-      <li>Followers: ${user.followers}</li>
-      <li>Following: ${user.following}</li>
-      <li>Public Repos: ${user.public_repos}</li>
-      <li>GitHub Link: <a href="${user.html_url}" target="_blank">Profile</a></li>
-    </ul>
-  `;
-  userDetails.classList.add("active");
-}
-
+//
 function updatePagination() {
   currentPageSpan.textContent = currentPage;
   prevButton.disabled = currentPage === 1;

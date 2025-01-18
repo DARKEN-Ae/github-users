@@ -35,6 +35,10 @@ header img {
   height: 50px;
 }
 
+.view-profile {
+  color: #fff;
+}
+
 li {
   a {
     color: #ffc400;
